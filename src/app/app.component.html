@@ -1,0 +1,9 @@
+<app-headerRenita (featureSelected)="onNavigate($event)"></app-headerRenita>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <app-recipeRenita *ngIf="loadedFeature === 'recipe'"></app-recipeRenita>
+      <app-shopping-listRenita *ngIf="loadedFeature !== 'recipe'"></app-shopping-listRenita>
+    </div>
+  </div>
+</div>
