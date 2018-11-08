@@ -10,6 +10,7 @@ import { RecipeListRenitaComponent } from './recipeRenita/recipe-listRenita/reci
 import { RecipeItemRenitaComponent } from './recipeRenita/recipe-listRenita/recipe-itemRenita/recipe-itemRenita.component';
 import { ShoppingEditRenitaComponent } from './shopping-listRenita/shopping-editRenita/shopping-editRenita.component';
 import { DropdownRenitaDirective } from './sharedRenita/dropdownRenita.directive';
+import { ShoppingListRenitaService } from './shopping-listRenita/shopping-listRenita.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { DropdownRenitaDirective } from './sharedRenita/dropdownRenita.directive
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ShoppingListRenitaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
