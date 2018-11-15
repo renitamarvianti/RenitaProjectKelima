@@ -1,6 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Recipe } from '../recipeRenita.model';
 import { RecipeRenitaService } from '../recipeRenita.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-listRenita',
@@ -13,12 +14,17 @@ export class RecipeListRenitaComponent implements OnInit {
   recipes:Recipe[];
   //property:class recipe
  
-  constructor(private recipeRenitaService:RecipeRenitaService) { }
+  constructor(private recipeRenitaService:RecipeRenitaService,
+              private router:Router,
+              private route:ActivatedRoute) { }
 
   ngOnInit() {
     this.recipes=this.recipeRenitaService.getRecipes();
   }
 
+  onNewRecipe(){
+    this.router.navigate(['new'],{relativeTo:this.route})
+  }
   //onRecipeSelected(recipe:Recipe){
     //this.recipeWasSelected.emit(recipe);
   //}

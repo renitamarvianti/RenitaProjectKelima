@@ -10,15 +10,16 @@ import { RecipeRenitaService } from '../../recipeRenita.service';
 export class RecipeItemRenitaComponent implements OnInit {
 
   @Input() recipe:Recipe;
+  @Input() index:number;
   //@Output() recipeSelected=new EventEmitter<void>();
 
-  constructor(private recipeRenitaService:RecipeRenitaService) { }
+  //constructor(private recipeRenitaService:RecipeRenitaService) { }
 
   ngOnInit() {
   }
 
-  onSelected(){
-    //this.recipeSelected.emit();
-    this.recipeRenitaService.recipeRenitaSelected.emit(this.recipe);
-  }
+  //onSelected(){
+    // //this.recipeSelected.emit();
+    //this.recipeRenitaService.recipeRenitaSelected.emit(this.recipe);
+  //}
 }
